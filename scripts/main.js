@@ -29,13 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let container = document.querySelector('#container');
   function addImageElements() {
-    imgLinks.forEach((d) => {
+    imgLinks.forEach((i) => {
       let newImg = document.createElement('img');
-      newImg.src = d;
+      newImg.src = i;
       newImg.style.left = 100 * Math.random() + '%';
       newImg.style.top = 100 * Math.random() + '%';
       container.appendChild(newImg);
     });
   }
   addImageElements();
+  let poem = document.querySelector('.poem');
+  function addTextElements() {
+    textHolder.forEach((d) => {
+      let newText = document.createElement('li');
+      newText.src = d;
+      link = document.createTextNode(d);
+      poem.appendChild(link);
+    });
+  }
+  addTextElements();
+  
 });
